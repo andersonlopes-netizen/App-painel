@@ -2,60 +2,106 @@
 <html lang="pt-BR">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
+    <title>Painel Educacional Pomerode</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ícone do iPhone -->
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 
-<title>Painel Educacional Pomerode</title>
+    <!-- Ícone do navegador -->
+    <link rel="icon" type="image/png" href="icons/apple-touch-icon.png">
 
-<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
-<link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#001F3F">
+    <!-- Manifesto PWA -->
+    <link rel="manifest" href="manifest.json">
 
+    <!-- Cor da barra -->
+    <meta name="theme-color" content="#001F3F">
 
-<style>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
 
-body {
-    margin: 0;
-    height: 100vh;
-    background: #001F3F;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Arial, sans-serif;
-}
+        body{
+            background:#001F3F;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+            font-family:Arial, Helvetica, sans-serif;
+            overflow:hidden;
+        }
 
-.container {
-    text-align: center;
-    color: white;
-}
+        .container{
+            text-align:center;
+            color:white;
+        }
 
-img {
-    width: 250px;
-    height: 250px;
-    object-fit: contain;
-}
+        img{
+            width:220px;
+            max-width:70vw;
+            margin-bottom:25px;
+        }
 
-h1 {
-    font-size: 24px;
-}
+        h1{
+            font-size:28px;
+            margin-bottom:10px;
+        }
 
-</style>
+        p{
+            font-size:18px;
+            opacity:.9;
+        }
+
+        .loader{
+            width:45px;
+            height:45px;
+            border:5px solid rgba(255,255,255,.25);
+            border-top:5px solid #ffffff;
+            border-radius:50%;
+            margin:30px auto 0;
+            animation:girar 1s linear infinite;
+        }
+
+        @keyframes girar{
+            from{transform:rotate(0deg);}
+            to{transform:rotate(360deg);}
+        }
+    </style>
 
 </head>
-
 
 <body>
 
 <div class="container">
-<img src="icons/apple-touch-icon.png" style="width:320px;height:320px;object-fit:cover;">
-<h1>
-Painel Educacional Pomerode
-</h1>
+
+    <img src="icons/apple-touch-icon.png" alt="Painel Educacional Pomerode">
+
+    <h1>Painel Educacional</h1>
+
+    <p>Pomerode</p>
+
+    <div class="loader"></div>
 
 </div>
 
-</body>
+<script>
 
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("sw.js");
+}
+
+setTimeout(function () {
+
+    window.location.replace("COLE_AQUI_O_LINK_DO_SEU_GOOGLE_SITES");
+
+}, 2500);
+
+</script>
+
+</body>
 </html>
