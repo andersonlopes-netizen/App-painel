@@ -3,31 +3,67 @@
 
 <head>
 
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="512x512" href="icons/icon-512.png">
+<meta charset="UTF-8">
 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Painel Educacional Pomerode</title>
+
+<!-- Ícone para iPhone -->
+<link rel="apple-touch-icon" sizes="512x512" href="icons/icon-512.png">
+
+<!-- Ícone do navegador -->
+<link rel="icon" type="image/png" href="icons/icon-512.png">
+
+<!-- Configuração PWA -->
 <link rel="manifest" href="manifest.json">
 
+<meta name="theme-color" content="#001F3F">
 
-<body style="margin:0;background:#001F3F;display:flex;justify-content:center;align-items:center;height:100vh;">
+<style>
+
+body {
+    margin: 0;
+    height: 100vh;
+    background: #001F3F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+    color: white;
+}
+
+img {
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+</style>
+
+</head>
 
 
-<img 
-src="icons/icon-512.png"
-style="width:250px;"
->
+<body>
 
 
-<script>
+<div class="container">
 
-setTimeout(function(){
+<img src="icons/icon-512.png" alt="Painel Educacional Pomerode">
 
-window.location.href="https://sites.google.com/pomerode.edu.sc.gov.br/painel-educacao-pomerode/in%C3%ADcio";
+<h1>
+Painel Educacional Pomerode
+</h1>
 
-},2000);
-
-
-</script>
+</div>
 
 
 </body>
